@@ -1,61 +1,215 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Bürgergeld PDF Filler (Laravel 12 + pdftk)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This project is a small Laravel 12 API that accepts JSON input and returns a **filled Bürgergeld Hauptantrag PDF (pages 1–2)** as a downloadable file.  
+It uses the `mikehaertl/pdftk` PHP library and the system `pdftk` command to map JSON fields to form fields inside the provided official PDF template.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🧠 Overview
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Input: a JSON file containing form data  
+- Process: the API maps each JSON field to the correct PDF form field and fills it  
+- Output: a fully filled Bürgergeld form (first two pages) returned as a downloadable PDF  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This implementation is based on the field structure of the official **Bürgergeld_Hauptantrag.pdf** and handles:
+- Text fields (e.g., name, address, date of birth)
+- Checkboxes and radio buttons (`selektiert`, `ja`, `nein`, etc.)
+- German-specific form options (e.g., marital status, gender, residence permit)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ Requirements
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+| Component | Minimum Version | Notes |
+|------------|----------------|-------|
+| PHP | 8.3+ | Required by Laravel 12 |
+| Composer | Latest | For dependency management |
+| Laravel | 12 | Framework |
+| pdftk | any | Used by `mikehaertl/pdftk` library |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🧩 Install pdftk
 
-## Laravel Sponsors
+**macOS (Homebrew / Apple Silicon):**
+```bash
+brew install pdftk-java
+which pdftk
+# usually /opt/homebrew/bin/pdftk
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Windows:
+```
+Download and install PDFtk Server.
+```
+⸻
 
-### Premium Partners
+📦 Project Setup
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+1. Clone the repository
+```
+git clone https://github.com/<your-username>/json-pdf-buergergeld.git
+cd json-pdf-buergergeld
+```
+2. Install dependencies
 
-## Contributing
+composer install
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. Configure Laravel
+```
+cp .env.example .env
+php artisan key:generate
+```
+(No database needed — this project is purely file-based.)
 
-## Code of Conduct
+⸻
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+🧾 PDF Template
 
-## Security Vulnerabilities
+Place your blank Bürgergeld form inside:
+```
+storage/app/forms/Bürgergeld_Hauptantrag.pdf
+```
+⚠️ Important: the filename must match exactly, including the umlaut.
+If your system has encoding issues, rename the file (e.g., Buergergeld_Hauptantrag.pdf) and update this line inside the controller:
+```
+$template = storage_path('app/forms/Buergergeld_Hauptantrag.pdf');
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+⸻
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+🚀 Run the API
+
+Start the local Laravel server:
+```
+php artisan serve
+```
+You’ll see:
+```
+Starting Laravel development server: http://127.0.0.1:8000
+```
+The main endpoint is:
+```
+POST http://127.0.0.1:8000/api/citizen-form-pdf
+```
+
+⸻
+
+🧠 Example Usage
+
+Create a test.json
+```
+{
+  "first_name": "Max",
+  "surname": "Mustermann",
+  "date_of_birth": "2002-11-21",
+  "birth_location": "Berlin",
+  "birth_country": "DE",
+  "nationality": "DE",
+  "gender": "male",
+  "address_street": "Seydlitzviertel",
+  "address_no": "12",
+  "address_postal": "16303",
+  "address_city": "Schwedt",
+  "phone": "017655919583",
+  "account_holder": "Max Mustermann",
+  "account_iban": "DE123456789",
+  "marital_status": "single",
+  "start_date": "2025-10-06"
+}
+```
+Test via curl
+```
+curl -X POST "http://127.0.0.1:8000/api/citizen-form-pdf" \
+  -H "Content-Type: application/json" \
+  --data-binary @test.json \
+  --output filled_form.pdf
+```
+When successful, you’ll get a filled_form.pdf downloaded to your local folder.
+
+⸻
+
+🧩 API Endpoint
+
+Method	Endpoint	Description
+POST	/api/citizen-form-pdf	Accepts JSON and returns a filled PDF download
+
+Routing (routes/api.php):
+```
+use App\Http\Controllers\CitizenFormPdfController;
+
+Route::post('/citizen-form-pdf', [CitizenFormPdfController::class, 'generate']);
+```
+
+⸻
+
+🧱 How It Works
+
+Field Mapping
+
+Inside CitizenFormPdfController.php, there’s a $map array:
+```
+$map = [
+    'first_name'     => 'txtfPersonVorname',
+    'surname'        => 'txtfPersonNachname',
+    'date_of_birth'  => 'datePersonGebDatum',
+    ...
+];
+```
+The script:
+	1.	Reads your JSON input
+	2.	Maps it to the PDF field names
+	3.	Sets checkbox/radio values using the exact FieldStateOption found in the form
+	4.	Calls:
+```
+$pdf->fillForm($data)
+    ->dropXfa()
+    ->flatten();
+```
+This fills the data, removes XFA (so Mac Preview works), and flattens the PDF (bakes checkmarks permanently).
+
+⸻
+
+🧩 Field Behavior Summary
+
+Field	Type	ON value used	Comment
+Gender	checkbox	selektiert	All four OFF → one ON
+Bank account missing	checkbox	selektiert	chbxKonto
+Residence permit	radio	ja, fuegen Sie die Aufenthaltsgenehmigung bei / nein	Exact match required
+Marital status	checkbox	selektiert	All 7 handled
+Application start	checkbox	selektiert	Handles “ab sofort” / “ab späterem Zeitpunkt”
+No fixed residence	checkbox	selektiert	Optional
+
+
+
+📁 Repository Structure
+```
+citizen-form/
+├── app/
+│   └── Http/Controllers/CitizenFormPdfController.php
+├── routes/
+│   └── api.php
+├── storage/
+│   └── app/forms/Bürgergeld_Hauptantrag.pdf
+├── test.json
+├── README.md
+├── composer.json
+└── artisan
+```
+
+
+
+⸻
+
+📬 About
+
+Author: Shyamkumar Selvakumar
+Description: Task project — mapping Bürgergeld application JSON to PDF.
+Framework: Laravel 12
+Language: PHP
+Tooling: PDFtk + mikehaertl/pdftk wrapper
+
+⸻
+
+🧾 License
+
+MIT License — you can freely reuse or modify this project.
