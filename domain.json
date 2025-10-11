@@ -1,0 +1,40 @@
+{
+  "applicant": {
+    "first_name": "Max",
+    "surname": "Mustermann",
+    "date_of_birth": "2002-11-21",
+    "birth_location": "Berlin",
+    "birth_country": "DE",
+    "nationality": "DE",
+    "gender": "male",
+    "address_street": "Seydlitzviertel",
+    "address_no": "12",
+    "address_postal": "16303",
+    "address_city": "Schwedt",
+    "phone": "017655919583",
+    "marital_status": "single"
+  },
+  "household": [
+    {
+      "id": "p2",
+      "role": "member",
+      "age": 25,
+      "relationship": "partner",
+      "in_bg": true,
+      "first_name": "Anna",
+      "surname": "Schmidt",
+      "date_of_birth": "1999-05-10",
+      "gender": "female",
+      "nationality": "DE",
+      "marital_status": "married"
+    }
+  ],
+  "housing": {
+    "claims_housing_costs": false
+  },
+  "income": [],
+  "assets": [],
+  "flags": {
+    "self_employed": false
+  }
+}

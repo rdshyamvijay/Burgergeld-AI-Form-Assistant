@@ -1,0 +1,740 @@
+---
+FieldType: Text
+FieldName: txtfPersonVorname
+FieldNameAlt: 1 - Vorname antragstellende Person
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfPersonNachname
+FieldNameAlt: 2 - Nachname antragstellende Person
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: datePersonGebDatum
+FieldNameAlt: 3 - Geburtsdatum (TT.MM.JJJJ) antragstellende Person
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfBGNr
+FieldNameAlt: 4 - Nummer der Bedarfsgemeinschaft (falls vorhanden)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfBGVorname
+FieldNameAlt: 5 - Vorname der Person, f&#252;r die diese Anlage ausgef&#252;llt wird
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfBGNachname
+FieldNameAlt: 6 - Nachname der Person, f&#252;r die diese Anlage ausgef&#252;llt wird
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: dateBGGebDatum
+FieldNameAlt: 7 - Geburtsdatum (TT.MM.JJJJ) der Person, f&#252;r die diese Anlage ausgef&#252;llt wird
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfBGGebName
+FieldNameAlt: 8 - Geburtsname/fr&#252;herer Name der Person, f&#252;r die diese Anlage ausgef&#252;llt wird
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfBGGebOrt
+FieldNameAlt: 9 - Geburtsort der Person, f&#252;r die diese Anlage ausgef&#252;llt wird
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfBGGebLand
+FieldNameAlt: 10 - Geburtsland der Person, f&#252;r die diese Anlage ausgef&#252;llt wird
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfBGStaatsangehoerigkeit
+FieldNameAlt: 11 - Staatsangeh&#246;rigkeit der Person, f&#252;r die diese Anlage ausgef&#252;llt wird
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: chbxBGMaennlich
+FieldNameAlt: 12 - Option1 von 4 - Geschlecht - m&#228;nnlich
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxBGWeiblich
+FieldNameAlt: 12 - Option2 von 4 - Geschlecht - weiblich
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxBGDivers
+FieldNameAlt: 12 - Option3 von 4 - Geschlecht - divers
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxBGKeine
+FieldNameAlt: 12 - Option4 von 4 - Geschlecht - keine Angabe
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: rbtnRVNr
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: txtfRVNr
+FieldNameAlt: 14 - Rentenversicherungsnummer/Sozialversicherungsnummer der Person
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnBetreuer
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuegen Sie eine Kopie der Bestellungsurkunde oder des Betreuerausweises bei
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: dateEinreise
+FieldNameAlt: 16 - Sofern die Person keine deutsche Staatsangeh&#246;rigkeit hat und zuvor im Ausland gelebt hat, tragen Sie bitte das Datum (TT.MM.JJJJ) der Einreise nach Deutschland ein.
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnAufenth
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuegen Sie die Aufenthaltsgenehmigung bei
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnVerpflichtungsE
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuegen Sie eine Kopie der Verpflichtungserklaerung oder einen anderen Nachweis bei
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: chbxFamilienstandLedig
+FieldNameAlt: 19 - Option1 von 7 - Aktueller Familienstand der Person - ledig
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxFamilienstandVerheiratet
+FieldNameAlt: 19 - Option2 von 7 - Aktueller Familienstand der Person - verheiratet
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxFamilienstandVerwitwet
+FieldNameAlt: 19 - Option3 von 7 - Aktueller Familienstand der Person - verwitwet
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxFamilienstandLebenspartnerschaft
+FieldNameAlt: 19 - Option4 von 7 - Aktueller Familienstand der Person - eingetragene Lebenspartnerschaft
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxFamilienstandGetrennt
+FieldNameAlt: 19 - Option5 von 7 - Aktueller Familienstand der Person - dauernd getrennt lebend (f&#252;llen Sie auch die Anlage UH1 aus)
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxFamilienstandGeschieden
+FieldNameAlt: 19 - Option6 von 7 - Aktueller Familienstand der Person - geschieden (f&#252;llen Sie auch die Anlage UH1 aus)
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxFamilienstandAufgehoben
+FieldNameAlt: 19 - Option7 von 7 - Aktueller Familienstand der Person - aufgehobene Lebenspartnerschaft (f&#252;llen Sie auch die Anlage UH1 aus)
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Text
+FieldName: dateGetrennt
+FieldNameAlt: 20 - Seit wann ist die Person dauernd getrennt lebend, geschieden oder wann wurde die Lebenspartnerschaft aufgehoben? - Datum seit/am (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnVerwandt
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein, fuellen Sie auch die Anlage VE aus
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: txtfVerwandt
+FieldNameAlt: 22 - Verwandtschaftsverh&#228;ltnis
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnErwerbsfaehig
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnSchueler
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuegen Sie Nachweise bei
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnKostenBuecher
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnUnterbringung
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnUnter18
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnBGElternAusserhalb
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnSchulausbildung
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuellen Sie auch die Anlage UH3 aus
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnAsylbLG
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuegen Sie den Bewilligungsbescheid bei
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: dateAsylbL
+FieldNameAlt: 31 - Bis wann erh&#228;lt die Person Asylbewerberleistungen? - Datum bis (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: numfPersonenIDNr
+FieldNameAlt: 32 - Personenidentifikationsnummer der Person
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: numfAuslaenderRegNr
+FieldNameAlt: 33 - Ausl&#228;nderzentralregisternummer der Person
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnBUEG
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: txtfArtLeistung
+FieldNameAlt: 35 - Bitte geben Sie die Art der Leistung an.
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: dateLeistungsbezugVon
+FieldNameAlt: 36 - Bitte geben Sie den Zeitraum des Bezugs an - Datum von (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: dateLeistungsbezugBis
+FieldNameAlt: 36 - Bitte geben Sie den Zeitraum des Bezugs an - Datum bis (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfLeistungstraegerName
+FieldNameAlt: 37 - Name des Leistungstr&#228;gers
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfLeistungstraegerStr
+FieldNameAlt: 38 - Stra&#223;e des Leistungstr&#228;gers
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfLeistungstraegerHausNr
+FieldNameAlt: 39 - Hausnummer des Leistungstr&#228;gers
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfLeistungstraegerPlz
+FieldNameAlt: 40 - Postleitzahl des Leistungstr&#228;gers
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfLeistungstraegerOrt
+FieldNameAlt: 41 - Ort des Leistungstr&#228;gers
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnAnstellung
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: dateBeschZeitraumVon
+FieldNameAlt: 43 - Geben Sie den Zeitraum der ersten Besch&#228;ftigung an - Datum von (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: dateBeschZeitraumBis
+FieldNameAlt: 43 - Geben Sie den Zeitraum der ersten Besch&#228;ftigung an - Datum bis (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: dateBeschZeitraum2Von
+FieldNameAlt: 43 - Geben Sie den Zeitraum der zweiten Besch&#228;ftigung an - Datum von (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: dateBeschZeitraum2Bis
+FieldNameAlt: 43 - Geben Sie den Zeitraum der zweiten Besch&#228;ftigung an - Datum bis (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnLohnansprueche
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: txtfAGName
+FieldNameAlt: 45 - Name (ehemalige) Arbeitgeberin/(ehemaliger) Arbeitgeber
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfAGStrasse
+FieldNameAlt: 46 - Stra&#223;e der (ehemaligen) Arbeitgeberin/des (ehemaligen) Arbeitgebers
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfAGHausNr
+FieldNameAlt: 47 - Hausnummer der (ehemaligen) Arbeitgeberin/des (ehemaligen) Arbeitgebers
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfAGPlz
+FieldNameAlt: 48 - Postleitzahl der (ehemaligen) Arbeitgeberin/des (ehemaligen) Arbeitgebers
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfAGOrt
+FieldNameAlt: 49 - Ort der (ehemaligen) Arbeitgeberin/des (ehemaligen) Arbeitgebers
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnSelbstaendig
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnEntgeltersatzleistung
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: txtfEntgeltersatzleistung
+FieldNameAlt: 52 - Geben Sie die Entgeltersatzleistung an.
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: dateEntgeltersatzleistungVon
+FieldNameAlt: 53 - Bitte geben Sie den Zeitraum an, in dem die Person die Entgeltersatzleistung erhalten hat. - Datum von (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: dateEntgeltersatzleistungBis
+FieldNameAlt: 53 - Bitte geben Sie den Zeitraum an, in dem die Person die Entgeltersatzleistung erhalten hat. - Datum bis (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnWehrdienst
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnPflege
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: txtfLebensunterhalt
+FieldNameAlt: 56 - Wenn keine der obigen Aussagen auf die Person zutrifft, geben Sie bitte an, wie die Person Ihren Lebensunterhalt bestritten hat, zum Beispiel finanzielle Unterst&#252;tzung durch Verwandte/Bekannte, Ersparnisse, Erbschaft.
+FieldFlags: 8392704
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnLeistungAndere
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: chbxLeistungBafoeg
+FieldNameAlt: 58 - Option1 von 9 - Leistungen, die die Person beantragt hat oder beantragen m&#246;chte. - Baf&#246;G (Leistungen nach dem Bundesausbildungsf&#246;rderungsgesetz) - F&#252;gen Sie soweit m&#246;glich Nachweise bei.
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxLeistungBAB
+FieldNameAlt: 58 - Option2 von 9 - Leistungen, die die Person beantragt hat oder beantragen m&#246;chte. - BAB (Berufsausbildungsbeihilfe) - F&#252;gen Sie soweit m&#246;glich Nachweise bei.
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxLeistungWohngeld
+FieldNameAlt: 58 - Option3 von 9 - Leistungen, die die Person beantragt hat oder beantragen m&#246;chte. - Wohngeld - F&#252;gen Sie soweit m&#246;glich Nachweise bei.
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxLeistungArbeitslosengeld
+FieldNameAlt: 58 - Option4 von 9 - Leistungen, die die Person beantragt hat oder beantragen m&#246;chte. - Arbeitslosengeld - F&#252;gen Sie soweit m&#246;glich Nachweise bei.
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxLeistungRente
+FieldNameAlt: 58 - Option5 von 9 - Leistungen, die die Person beantragt hat oder beantragen m&#246;chte. - Rente - F&#252;gen Sie soweit m&#246;glich Nachweise bei.
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxLeistungKRG
+FieldNameAlt: 58 - Option6 von 9 - Leistungen, die die Person beantragt hat oder beantragen m&#246;chte. - Krankengeld - F&#252;gen Sie soweit m&#246;glich Nachweise bei.
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxLeistungKG
+FieldNameAlt: 58 - Option7 von 9 - Leistungen, die die Person beantragt hat oder beantragen m&#246;chte. - Kindergeld - F&#252;gen Sie soweit m&#246;glich Nachweise bei.
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxLeistungKIZ
+FieldNameAlt: 58 - Option8 von 9 - Leistungen, die die Person beantragt hat oder beantragen m&#246;chte. - Kinderzuschlag - F&#252;gen Sie soweit m&#246;glich Nachweise bei.
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Button
+FieldName: chbxLeistungSonstiges
+FieldNameAlt: 58 - Option9 von 9 - Leistungen, die die Person beantragt hat oder beantragen m&#246;chte. - Sonstiges
+FieldFlags: 0
+FieldValue: Off
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: selektiert
+---
+FieldType: Text
+FieldName: txtfLeistungSonstiges
+FieldNameAlt: 58 - Sonstige Leistungen, die die Person beantragt hat oder beantragen m&#246;chte. - F&#252;gen Sie soweit m&#246;glich Nachweise bei.
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnSchaden
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuellen Sie auch die Anlage UF aus
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnAnspruchDritte
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuegen Sie einen Nachweis ueber den Anspruch bei
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnAlter15
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnSchwangerschaft
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: dateEntbindungstermin
+FieldNameAlt: 63 - Wann ist der voraussichtliche Entbindungstermin? (Falls der Kindsvater nicht in der Bedarfsgemeinschaft lebt, f&#252;llen Sie bitte auch die Anlage UH2 aus.)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnErnaehrung
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuellen Sie auch die Anlage MEB aus
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnErwerbslos
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuegen Sie einen Nachweis bei
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnBehinderung
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnLeistungTeilhabe
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuegen Sie den Bescheid bei
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnBB
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuellen Sie auch die Anlage BB aus
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnStationaer
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: txtfStationaerArt
+FieldNameAlt: 70 - Bitte geben Sie die Art der station&#228;ren Einrichtung an.
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: dateStationaerVon
+FieldNameAlt: 71 - Bitte geben Sie die (voraussichtliche) Dauer des Aufenthaltes an. - Datum von (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: dateStationaerBis
+FieldNameAlt: 71 - Bitte geben Sie die (voraussichtliche) Dauer des Aufenthaltes an. - Datum bis (TT.MM.JJJJ)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnKVPV
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, ergaenzen Sie die nachfolgenden Angaben und fuegen Sie einen Nachweis bei
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: txtfKVName
+FieldNameAlt: 73 - Name der Krankenkasse der Person
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: txtfKVNr
+FieldNameAlt: 74 - Krankenversichertennummer der Person (falls bekannt)
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: rbtnKVWechsel
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuegen Sie einen aktuellen Nachweis der Krankenkasse ueber die Versicherung bei
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: rbtnPV
+FieldFlags: 49152
+FieldJustification: Left
+FieldStateOption: ja, fuellen Sie auch die Anlage SV aus
+FieldStateOption: nein
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: dateUnterschriftPerson
+FieldNameAlt: 77 - Datum (TT.MM.JJJJ) - Unterschrift antragstellende Person
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: dateUnterschriftBetreuer
+FieldNameAlt: 79 - Datum (TT.MM.JJJJ) - Unterschrift Betreuerin/Betreuer/Vormund
+FieldFlags: 8388608
+FieldJustification: Left
