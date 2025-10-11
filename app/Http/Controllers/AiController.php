@@ -103,6 +103,19 @@ RULES;
             $domain['flags'] = $payload['flags'];
         }
 
+        $wepFields = array_column($this->wepSchemaArray(), 'key');
+        if (!empty($wepFields)) {
+            $flip = array_flip($wepFields);
+            if (!empty($domain['household']) && is_array($domain['household'])) {
+                foreach ($domain['household'] as $idx => $member) {
+                    if (is_array($member)) {
+                        $domain['household'][$idx] = array_diff_key($member, $flip);
+                    }
+                }
+            }
+        }
+        unset($domain['wep']);
+
         $this->writeDomain($domain);
         return response()->json(['ok' => true, 'domain' => $domain]);
     }
