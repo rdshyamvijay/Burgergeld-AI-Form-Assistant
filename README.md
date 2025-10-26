@@ -2,8 +2,6 @@
 
 An interactive assistant that guides German Bürgergeld applicants through the **Hauptantrag (HA)** and **Anlage WEP** forms, fills any missing data, and delivers a **merged PDF** (HA + WEP) ready for download. The project combines deterministic PDF mapping with helpful AI moments backed by Google Gemini.
 
-https://github.com/user-attachments/assets/23077001-f818-4a4b-a0aa-0d0b12059a03
-
 
 
 ---
