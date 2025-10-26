@@ -2,6 +2,10 @@
 
 An interactive assistant that guides German Bürgergeld applicants through the **Hauptantrag (HA)** and **Anlage WEP** forms, fills any missing data, and delivers a **merged PDF** (HA + WEP) ready for download. The project combines deterministic PDF mapping with helpful AI moments backed by Google Gemini.
 
+https://github.com/user-attachments/assets/23077001-f818-4a4b-a0aa-0d0b12059a03
+
+
+
 ---
 
 ## ✨ Key Features
@@ -12,6 +16,11 @@ An interactive assistant that guides German Bürgergeld applicants through the *
 - **WEP smart form**: only shows questions still missing for the target household member.
 
 ### AI Integrations
+
+
+https://github.com/user-attachments/assets/2a53edff-4a52-4ac8-b888-8cc5e231371f
+
+
 - **Annex selection** (`/api/ai/annexes`): Gemini recommends HA + WEP (demo scope) based on the current domain JSON. Deterministic guard rails ensure HA is always included.
 - **“What’s missing?” generator** (`/api/wep/questions`): Gemini receives metadata from `WEP_fields.txt` and returns natural questions; we fall back to deterministic logic if the call fails.
 - **Field-level assistant**: every “?” button opens a chat widget that:
